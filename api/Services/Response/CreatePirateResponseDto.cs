@@ -6,5 +6,6 @@ public class CreatePirateResponseDto
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Crew { get; set; }
+    public string Ship { get; set; }
     public string Rank { get; set; }
 }
