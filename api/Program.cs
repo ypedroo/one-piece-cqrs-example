@@ -1,14 +1,16 @@
-using api.Domain;
+using api.Data.Extensions;
+using api.Domain.Context;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<OnePieceDbContext>(o=>o.UseInMemoryDatabase(Guid.NewGuid().ToString()),ServiceLifetime.Singleton);
+builder.Services.RegisterDependencies();
 
 var app = builder.Build();
 

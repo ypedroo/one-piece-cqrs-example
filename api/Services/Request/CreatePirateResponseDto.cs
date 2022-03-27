@@ -1,16 +1,11 @@
-﻿namespace api.Domain.Models;
+﻿namespace api.Services.Dtos;
 
-public interface IEntity
-{
-    long Id { get; set; }
-}
-
-public class Pirate : IEntity
+public class CreatePirateRequestDto
 {
     public long Id { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Crew { get; set; }
     public string Rank { get; set; }
-    public List<Pirate> Foes { get; set; }
+    public string Ship { get; set; }
 }
