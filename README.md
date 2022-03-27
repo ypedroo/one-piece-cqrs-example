@@ -6,5 +6,6 @@ This is just a demo for CQRS appliance using .NET 6
 ## Todo
 * Add more endpoints
 * Add fluent validations
-* Create options for minimal endpoints
+* Remove controllers
+* Add exception handler for examples
 * Add it to a cloud provider
